@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <groupId>org.nuxeo.ecm.platform</groupId>
+    <artifactId>nuxeo-services-parent</artifactId>
+    <version>5.5</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.nuxeo.ecm.platform</groupId>
+  <artifactId>nuxeo-yammer-sample-parent</artifactId>
+  <name>Nuxeo yammer sample parent</name>
+  <packaging>pom</packaging>
+  <description>Learn how to use three legged oauth 
+    auhtentication by sharing documents on yammer.</description>
+  <version>5.6-SNAPSHOT</version>
+
+  <dependencyManagement>
+    <dependencies>
+    <dependency>
+      <groupId>org.nuxeo.ecm.platform</groupId>
+      <artifactId>nuxeo-webengine-oauth</artifactId>
+      <version>${pom.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.nuxeo.ecm.platform</groupId>
+      <artifactId>nuxeo-common</artifactId>
+      <version>${pom.version}</version>
+    </dependency>
+
+    </dependencies>
+  </dependencyManagement>
+
+  <modules>
+    <module>nuxeo-webengine-oauth</module>
+    <module>nuxeo-yammer-sample/</module>
+  </modules>
+
+
+
+</project>

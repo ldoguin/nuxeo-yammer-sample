@@ -1,0 +1,18 @@
+<div class="actions_block"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:h="http://java.sun.com/jsf/html">
+
+    <f:subview rendered="#{shareInYammer.hasToken() and shareInYammer.authorized}">
+      <p><h:outputText value="#{messages['label.summary.yammer.share.comment']} "/></p>
+      <div><h:inputTextarea value="#{shareInYammer.comment}" /></div>
+      <p><h:commandLink value="#{messages['label.summary.yammer.share']}"
+        action="#{shareInYammer.shareCurrentDocument}" /></p>
+    </f:subview>
+
+    <f:subview rendered="#{not shareInYammer.hasToken() or not shareInYammer.authorized}">
+      <p><h:outputLink target="_blank" value="#{yammerSubscriberUrl}" >
+        <h:outputText value="#{messages['label.summary.yammer.askauthorization']}" />
+      </h:outputLink></p>
+    </f:subview>
+
+</div>

@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-Vendor: Nuxeo
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
+Bundle-Version: 5.5
+Bundle-Name: YammerIntegration
+Nuxeo-Component: OSGI-INF/yammer-layouts-contrib.xml,
+ OSGI-INF/yammer-ecm-types-contrib.xml,
+ OSGI-INF/yammer-operation-contrib.xml
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: YammerIntegration
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+
